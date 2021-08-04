@@ -16,6 +16,7 @@ function App() {
     </header>
     <Switch>
       <Route component={Landing}/>
+      <Route to='/game' component={Game}/>
     </Switch>
    </main>
   );
