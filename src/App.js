@@ -14,10 +14,11 @@ function App() {
        <NavLink className='fav-link' to='/favorites'>My Favorite Yeezaids</NavLink>
        </nav>
     </header>
-    <Switch>
-      <Route component={Landing}/>
-      <Route to='/game' component={Game}/>
-    </Switch>
+    <section className='entry-container'>
+      <Switch>
+        <Route component={Landing}/>
+      </Switch>
+    </section>
    </main>
   );
 }
