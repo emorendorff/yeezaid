@@ -2,6 +2,7 @@ import React from 'react'
 import './App.css';
 import Landing from './landing/Landing'
 import {Switch, Route, Link, NavLink } from 'react-router-dom'
+import Home from './home/Home';
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
     </header>
     <section className='entry-container'>
       <Switch>
-        <Route component={Landing}/>
+        <Route exact path='/' component={Landing}/>
+        <Route path='/home' render={() => <Home/> } />
       </Switch>
     </section>
    </main>

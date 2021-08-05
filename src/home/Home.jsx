@@ -4,17 +4,18 @@ import {useState, useEffect } from 'react'
 
 const Home = () => {
 
-        const [quote, setQuote] = useState([])
+        const [quotes, setQuotes] = useState([])
         const [error, checkError] = useState('')
         const [isLoading, setIsLoading] = useState(false)
     
     const getRealQuotes = async () => {
+        checkError('')
         setIsLoading(true)
         try {
-            let response = await fetch('https://github.com/ajzbc/kanye.rest/blob/master/quotes.json')
-            let quote = await response.json()
-            setQuote(quote)
-            console.log(quote)
+            const response = await fetch('https://api.kanye.rest/')
+            const quotes = await response.json()
+            setQuotes(quotes)
+            console.log(quotes)
         } catch(error) {
             checkError('When it all falls down')
         } finally {
@@ -22,13 +23,18 @@ const Home = () => {
         }
     }
 
-    return (
-        <p>{quote}</p>
-    )
+    useEffect(() => {
+        getRealQuotes()
+        console.log(getRealQuotes())
+    }, [])
 
+    return (
+        <p className='quote'>{quotes.quote}</p>
+    )
 
 }
 
 export default Home
+
 
 
