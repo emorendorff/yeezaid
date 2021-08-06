@@ -1,0 +1,19 @@
+.kanyeimg {
+    max-height: 711px;
+    max-width: 400px;
+}
+
+.descriptors { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.play-btn {
+    height: 7vh;
+    width: 20vw;
+}
+
+.bold {
+    font-weight: bold;
+}
