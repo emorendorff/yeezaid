@@ -46,8 +46,10 @@ const Home = ({favorites, setFavorites}) => {
     setRandomNum(random)
   }
 
-  const handleFavorites = (event) => {
-    setFavorites(favorites + )
+  const handleFavorites = () => {
+    if (!favorites.includes(kanyeQuotes)) {
+    setFavorites([...favorites, kanyeQuotes])
+    }
   }
 
   const handleClick = (event) => {
@@ -96,7 +98,7 @@ const Home = ({favorites, setFavorites}) => {
         <div>
           <h3>Correct!</h3>
           <button onClick={handlePlayAgain}>play again</button>
-          <button className='fav' >Add to favorite yeezaids</button>
+          {randomNum === 1 && <button className='fav' onClick={handleFavorites}>Add to favorite yeezaids</button>}
         </div>
       }
       {userHasAnswered && isCorrectAnswer === false &&
@@ -110,10 +112,3 @@ const Home = ({favorites, setFavorites}) => {
 }
 
 export default Home
-
-
-
-  // passToFavs = (event) => {
-  //     let quote = (event.currentTarget)
-  //     addToFavorites(quote)
-  // }

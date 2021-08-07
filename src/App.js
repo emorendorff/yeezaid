@@ -9,20 +9,6 @@ import Error from './Error/Error'
 function App() {
   const [favorites, setFavorites] = useState([])
 
-//   const [randomNum, setRandomNum] = useState(0)
-
-//   const getRandomNum = () => {
-//     let random = Math.floor(Math.random() * 2) + 1  
-//     setRandomNum(random)
-// }
-
-// useEffect(() => {
-//   getRandomNum()
-// }, [])
-// random num should exist in parent and pass down to home. 
-//maybe need a container component for the quotes and pass that 
-//on click behavior to change quote container 
-
   return (
   <main>
     <header>
