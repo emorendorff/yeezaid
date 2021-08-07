@@ -1,19 +1,19 @@
 .kanyeimg {
-    max-height: 711px;
-    max-width: 400px;
+  max-height: 711px;
+  max-width: 400px;
 }
 
 .descriptors { 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .play-btn {
-    height: 7vh;
-    width: 20vw;
+  height: 7vh;
+  width: 20vw;
 }
 
 .bold {
-    font-weight: bold;
+  font-weight: bold;
 }
