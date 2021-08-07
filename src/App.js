@@ -9,8 +9,8 @@ function App() {
   <main>
     <header>
       <nav>
-       <Link to='/'> 
-        <h1>Yeezaid What Now?</h1>
+       <Link className='home-link' to='/'> 
+        <h1 className='header-title'>Yeezaid What Now?</h1>
        </Link> 
        <NavLink className='fav-link' to='/favorites'>My Favorite Yeezaids</NavLink>
        </nav>
