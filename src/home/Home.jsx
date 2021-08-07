@@ -63,8 +63,8 @@ const Home = () => {
             {trumpQuotes && kanyeQuotes && !isLoading && !error && randomNum === 1 && <h3 className='quote'>"{kanyeQuotes.quote}"</h3>}
             {trumpQuotes && kanyeQuotes && !isLoading && !error && randomNum === 2 && <h3 className='quote'>"{trumpQuotes.message}"</h3>}
             <div className='button-flex'>
-                <button>Ye</button>
-                <button>Ne</button>
+                <button className='ye'>Ye</button>
+                <button className='ne'>Ne</button>
             </div>
             <button>Add to favorite yeezaids</button>
         </div>
