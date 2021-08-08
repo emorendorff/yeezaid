@@ -1,10 +1,11 @@
 import React from 'react'
 import './App.css';
 import Landing from './landing/Landing'
-import {useState, useEffect } from 'react'
+import {useState} from 'react'
 import {Switch, Route, Link, NavLink } from 'react-router-dom'
 import Home from './home/Home';
 import Error from './Error/Error'
+import Favorites from './favorites/Favorites'
 
 function App() {
   const [favorites, setFavorites] = useState([])
@@ -23,6 +24,7 @@ function App() {
       <Switch>
         <Route exact path='/' component={Landing}/>
         <Route path='/home' render={() => <Home favorites={favorites} setFavorites={setFavorites}/> } />
+        <Route path='/favorites' render={() => <Favorites favorites={favorites}/> } />
         <Route render={() => <Error />}/>
       </Switch>
     </section>
