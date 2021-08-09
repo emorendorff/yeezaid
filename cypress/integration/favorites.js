@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 describe('Favorties view', () => {
   it('Should display no favorites yet if no favorites are added', () => {
     cy.visit('http://localhost:3000/favorites')

@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 describe('Home Page View', () => {
   beforeEach(() => {
     cy.visit('http://localhost:3000/home')

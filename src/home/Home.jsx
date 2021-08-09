@@ -1,6 +1,7 @@
 import React from 'react' 
 import './home.css'
 import {useState, useEffect } from 'react'
+import PropTypes from 'prop-types'
 
 const Home = ({favorites, setFavorites}) => {
 
@@ -64,6 +65,7 @@ const Home = ({favorites, setFavorites}) => {
   }
 
   const gameLogic = (event) => {
+    // eslint-disable-next-line eqeqeq
     if (randomNum == event.target.value) {
       setIsCorrectAnswer(true)
     }
@@ -112,3 +114,11 @@ const Home = ({favorites, setFavorites}) => {
 }
 
 export default Home
+
+Home.propTypes = {
+  randomNum: PropTypes.number,
+  error: PropTypes.string,
+  isLoading: PropTypes.bool,
+  kanyeQuotes: PropTypes.array, 
+  trumpQuotes: PropTypes.array
+}
