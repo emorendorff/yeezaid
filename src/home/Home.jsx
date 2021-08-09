@@ -84,32 +84,34 @@ const Home = ({favorites, setFavorites}) => {
   }, [userHasAnswered])
 
   return (
-    <div>
+    <section className='home-container'>
       {userHasAnswered === false && isRestarting === false && !isLoading && (
-        <div>
+        <section className='game'>
           {!trumpQuotes && !kanyeQuotes && !error && isLoading && <h2 className='loading'>Getting quote...</h2> }
           {!trumpQuotes && !kanyeQuotes && error && <h2 className='loading'>Can't load quotes right now, try again later</h2>}
           {trumpQuotes && kanyeQuotes && !isLoading && !error && randomNum === 1 && <h3 className='quote'>"{kanyeQuotes.quote}"</h3>}
           {trumpQuotes && kanyeQuotes && !isLoading && !error && randomNum === 2 && <h3 className='quote'>"{trumpQuotes.message}"</h3>}
           <div className='button-flex'>
-            <button className='ye' onClick={handleClick} value={1}>Ye</button>
-            <button className='ne' onClick={handleClick} value={2}>Ne</button>
+            <button className='ye btn' onClick={handleClick} value={1}>Ye</button>
+            <button className='ne btn' onClick={handleClick} value={2}>Ne</button>
           </div>
-        </div>)}
+        </section>)}
       {userHasAnswered && isCorrectAnswer === true &&
-        <div>
-          <h3>Correct!</h3>
-          <button onClick={handlePlayAgain}>play again</button>
-          {randomNum === 1 && <button className='fav' onClick={handleFavorites}>Add to favorite yeezaids</button>}
-        </div>
+        <section>
+          <h3 className='answer'>Correct!</h3>
+          <div>
+            <button className='btn' onClick={handlePlayAgain}>play again</button>
+            {randomNum === 1 && <button className='btn' onClick={handleFavorites}>Add to favorite yeezaids</button>}
+          </div>
+        </section>
       }
       {userHasAnswered && isCorrectAnswer === false &&
-        <div>
-          <h3>Wrong</h3>
-          <button onClick={handlePlayAgain}>play again</button>
-        </div>
+        <section className='response-container'>
+          <h3 className='answer'>Wrong!</h3>
+          <button className='btn'onClick={handlePlayAgain}>play again</button>
+        </section>
       }
-    </div>
+    </section>
   )
 }
 
