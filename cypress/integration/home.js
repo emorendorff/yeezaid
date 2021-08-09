@@ -98,6 +98,35 @@ describe('Game play', () => {
     cy.get('h3').should('have.length', 1)
   })
 
+  it('Should be able to play again with new quote after clicking play again', () => {
+    it('Should get new quotes after play again', () => {
+      cy.intercept(
+        {
+          method: "GET",
+          url: 'https://api.kanye.rest/',
+        },
+        {
+          status: 201, 
+          body: [
+            {quote: "I am running for President of the United States"},
+          ],
+        }
+      )
+      cy.intercept(
+        {
+          method: "GET",
+          url: 'https://api.whatdoestrumpthink.com/api/v1/quotes/random',
+        },
+        {
+          status: 201,
+          body: {
+            message: "I could stand in the middle of Fifth Avenue and shoot somebody, and I wouldn't lose any voters",}
+        },
+      )
+      cy.get('h3').should('have.length', 1)
+    })
+  })
+
 
 
 
