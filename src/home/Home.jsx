@@ -120,5 +120,8 @@ Home.propTypes = {
   error: PropTypes.string,
   isLoading: PropTypes.bool,
   kanyeQuotes: PropTypes.array, 
-  trumpQuotes: PropTypes.array
+  trumpQuotes: PropTypes.array,
+  userHasAnswered: PropTypes.bool,
+  isRestarting: PropTypes.bool,
+  isCorrectAnswer: PropTypes.bool
 }
