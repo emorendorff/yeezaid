@@ -16,6 +16,8 @@
   flex-direction: column;
   justify-content: space-evenly;
   text-align: center;
+  font-size: 1.75em;
+  font-weight: bold;
 }
 
 .quote {
