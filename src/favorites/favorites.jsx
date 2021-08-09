@@ -9,7 +9,7 @@ const Favorites = ({ favorites }) => {
   
     return (
       <div>
-        {!favorites && <h3>No favorites yet!</h3>}
+        {!favorites.length && <h3>No favorites yet!</h3>}
         {favorites && 
         <ul>
           {eachFavorite}
