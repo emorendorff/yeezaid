@@ -5,7 +5,7 @@ import Landing from './landing/Landing'
 import {useState} from 'react'
 import {Switch, Route, Link, NavLink } from 'react-router-dom'
 import Home from './home/Home';
-import Error from './Error/Error'
+import Error from './error/Error'
 import Favorites from './favorites/Favorites'
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
     <header>
       <nav>
        <Link className='home-link' to='/'> 
-        <h1 className='header-title'>Yeezaid What Now?</h1>
+        <h1 className='header-title'>YEezaid What Now?</h1>
        </Link> 
        <NavLink className='fav-link' to='/favorites'>My Favorite Yeezaids</NavLink>
        </nav>

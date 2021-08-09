@@ -50,7 +50,7 @@ describe('Game play', () => {
 })
 
   it('Should be able to add quote to favorites if it is a Kanye quote', () => {
-    cy.get('.fav').click()
+    cy.get('button').contains('Add to Favorite Yeezaids').click()
   })
 
   it('Should be able to click a button to play again', () => {

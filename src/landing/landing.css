@@ -1,19 +1,44 @@
 .kanyeimg {
   max-height: 711px;
   max-width: 400px;
+  margin-top: 1em;
 }
 
 .descriptors { 
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: 'Times New Roman', sans-serif;
+  color: white;
+  background-color: #3f0d12;
+  background-image: linear-gradient(315deg, #3f0d12 0%, #a71d31 74%);
+  text-align: center;
+}
+
+.play-link {
+  text-decoration: none;
 }
 
 .play-btn {
   height: 7vh;
   width: 20vw;
+  background-color: #0F4741;
+  background-image: linear-gradient(315deg, #0F4741 0%, #449F6D 74%);
+  border: none;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 5px 5px 5px whitesmoke;
 }
 
 .bold {
   font-weight: bold;
+  margin-bottom: -.8em;
+}
+
+@media screen and (max-width: 500px) {
+  .kanyeimg {
+    max-width: 200px;
+    max-height: 355px;
+  }
 }
