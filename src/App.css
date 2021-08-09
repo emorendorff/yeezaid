@@ -10,7 +10,6 @@ main {
   height: 100vh;
   background-color: #3f0d12;
   background-image: linear-gradient(315deg, #3f0d12 0%, #a71d31 74%);
-
 }
 
 nav {
@@ -18,13 +17,13 @@ nav {
   flex-direction: column;
   align-items: center;
   background-color: #8E7820;
-  height: 5em;
+  height: 6.1em;
 }
 
 .header-title {
   font-size: 3em;
   color:  white;
-  margin: 0.3em 0 0 0;
+  margin: 0.3em 0 0 ;
   text-decoration: none;
   border-bottom: none;
 }
@@ -40,3 +39,19 @@ nav {
   font-weight: bolder;
   margin-right: 1em;
 }
+
+@media screen and (max-width: 500px) {
+  .header-title {
+    font-size: 1.5em;
+  }
+
+  .fav-link {
+    font-size: .75em;
+    align-self: center;
+  }
+
+  nav {
+    height: 4em;
+  }
+}
+
