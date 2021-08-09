@@ -42,18 +42,6 @@ describe('Home Page View', () => {
     cy.get('button').contains('Ye')
     cy.get('button').contains('Ne')
   })
-  // it('Should be able to click yes', () => {
-  //   cy.contains('Ye').click()
-  // })
-
-  // it('Should be able to add quotes to favorites', () => {
-  //   cy.contains('Ye').click() 
-  // })
-
-  // it('Should be able to click yes and no buttons', () => {
-  //   cy.get()
-  // })
-
 })
 
 describe('Game play', () => {
@@ -61,6 +49,10 @@ describe('Game play', () => {
   cy.get('.ye').click()
   cy.get('h3').should('have.length', 1)
 })
+
+  it('Should be able to add quote to favorites if it is a Kanye quote', () => {
+    cy.get('.fav').click()
+  })
 
   it('Should be able to click a button to play again', () => {
     cy.get('button').contains('play again').click()
@@ -99,8 +91,9 @@ describe('Game play', () => {
   })
 
   it('Should be able to play again with new quote after clicking play again', () => {
-    it('Should get new quotes after play again', () => {
-      cy.intercept(
+    cy.get('button').contains('play again').click()
+    
+    cy.intercept(
         {
           method: "GET",
           url: 'https://api.kanye.rest/',
@@ -112,7 +105,7 @@ describe('Game play', () => {
           ],
         }
       )
-      cy.intercept(
+    cy.intercept(
         {
           method: "GET",
           url: 'https://api.whatdoestrumpthink.com/api/v1/quotes/random',
@@ -123,19 +116,13 @@ describe('Game play', () => {
             message: "I could stand in the middle of Fifth Avenue and shoot somebody, and I wouldn't lose any voters",}
         },
       )
+    })
+
+    it('Should have a new quote displayed', () => {
       cy.get('h3').should('have.length', 1)
     })
   })
 
-
-
-
-
-})
-
-// it('Should be able to go back to a new quote from favorites', () => {
-//   cy.get('button').contains('Back').click()
-// })
 
 
 
