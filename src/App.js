@@ -23,8 +23,8 @@ function App() {
     <section className='entry-container'>
       <Switch>
         <Route exact path='/' component={Landing}/>
-        <Route path='/home' render={() => <Home favorites={favorites} setFavorites={setFavorites}/> } />
-        <Route path='/favorites' render={() => <Favorites favorites={favorites}/> } />
+        <Route exact path='/home' render={() => <Home favorites={favorites} setFavorites={setFavorites}/> } />
+        <Route exact path='/favorites' render={() => <Favorites favorites={favorites}/> } />
         <Route render={() => <Error />}/>
       </Switch>
     </section>

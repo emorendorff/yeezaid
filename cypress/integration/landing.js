@@ -21,3 +21,15 @@ describe('Landing Page', () => {
     cy.get('.fav-link').contains('My Favorite Yeezaids')
   })
 })
+
+describe('Route Error', () => {
+  it('Should display 404 error if path is not correct', () => {
+    cy.visit('http://localhost:3000/dfhdad')
+    cy.get('h2').contains('Whoops')
+  })
+
+  it('Should give user the option to return to landing page', () => {
+    cy.get('.go-back').contains('Go Back').click()
+  })
+
+})
