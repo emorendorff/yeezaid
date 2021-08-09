@@ -97,11 +97,11 @@ const Home = ({favorites, setFavorites}) => {
           </div>
         </section>)}
       {userHasAnswered && isCorrectAnswer === true &&
-        <section>
-          <h3 className='answer'>Correct!</h3>
-          <div>
+        <section className='answer'>
+          <h3>Correct!</h3>
+          <div className='button-flex'>
             <button className='btn' onClick={handlePlayAgain}>play again</button>
-            {randomNum === 1 && <button className='btn' onClick={handleFavorites}>Add to favorite yeezaids</button>}
+            {randomNum === 1 && <button className='btn' onClick={handleFavorites}>Add to Favorite Yeezaids</button>}
           </div>
         </section>
       }

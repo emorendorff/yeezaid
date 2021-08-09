@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom'
 import './favorites.css'
 
 const Favorites = ({ favorites }) => {
-  let eachFavorite = favorites.map(each => {
-    
+  let eachFavorite = favorites.map((each) => {
     return <li>"{each.quote}"</li>})
 
   

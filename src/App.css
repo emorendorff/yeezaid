@@ -34,10 +34,15 @@ nav {
 
 .fav-link {
   align-self: flex-end;
-  color: #e5e6e4;
+  color: white;
   font-size: 1.3em;
   font-weight: bolder;
   margin-right: 1em;
+  text-decoration: none;
+}
+
+.fav-link:hover {
+  color: #0F4741;
 }
 
 @media screen and (max-width: 500px) {
