@@ -15,13 +15,20 @@
   text-align: center;
 }
 
+.play-link {
+  text-decoration: none;
+}
+
 .play-btn {
   height: 7vh;
   width: 20vw;
-}
-
-.play-link {
-  text-decoration: none;
+  background-color: #0F4741;
+  background-image: linear-gradient(315deg, #0F4741 0%, #449F6D 74%);
+  border: none;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 5px 5px 5px whitesmoke;
 }
 
 .bold {
