@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 describe('Landing Page', () => {
   beforeEach(() => {
     cy.visit('http://localhost:3000')

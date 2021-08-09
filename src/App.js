@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import './App.css';
 import Landing from './landing/Landing'
 import {useState} from 'react'
@@ -33,3 +34,7 @@ function App() {
 }
 
 export default App;
+
+App.propTypes = {
+  favorites: PropTypes.array
+}
