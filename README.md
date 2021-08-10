@@ -14,9 +14,6 @@
 ## Overview
 Those Kanye West fans that love his music but are constantly astounded at some of the things that he's said in interviews or on stage. How do we know what's real and what's not? What is inspirational and what makes 0 sense? The real fans will know and these fans are inspired and motivated by the absurdity. This was our final solo project for Mod 3, focusing on a niche audience and showcasing our React skillset learned throughout this mod in addition to Router, Cypress, Hooks, and PropTypes. Utilizing a Kanye quote API, I needed a way to generate "fake" quotes to throw users off. This was done by grabbing an API from the next most absurd quote API I could think of, Donald J. Trump. Some are easier to guess than others, but some are true gems. The spec for this project can be found [here](https://frontend.turing.edu/projects/module-3/niche-audience.html)
 
-Check it out [here on heroku](https://paint-by-hex-number.herokuapp.com/) or see instructions for viewing locally below. 
-
-
 # Instructions for Viewing Locally 
   * Clone down this repo by copying the SSH key and from your terminal git clone <repo SSH key>
   * `npm i` to install dependencies
